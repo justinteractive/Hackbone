@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JSLintConfiguration" html="true" css="true" json="true">
+    <option browser="true" />
+    <option css="true" />
+    <option devel="true" />
+    <option es5="true" />
+    <option fragment="true" />
+    <option indent="4" />
+    <option maxerr="50" />
+    <option node="true" />
+    <option plusplus="true" />
+    <option sloppy="true" />
+    <option stupid="true" />
+    <option todo="true" />
+    <option undef="true" />
+    <option vars="true" />
+  </component>
+</project>
+
