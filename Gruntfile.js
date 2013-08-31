@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-    var indent = require('./node_modules/indent/indent');
+    var indent = require('indent');
     var pkg = grunt.file.readJSON('package.json');
 
     grunt.initConfig({
@@ -9,21 +9,24 @@ module.exports = function (grunt) {
             options: {
                 separator: '\n\n',
                 process: function (content, file) {
-                    return indent(pkg, content, file);
+                    //indent any JS files
+                    if (/\.js$/.test(file)) {
+                        return indent(pkg, content, file);
+                    }
+
+                    return content;
                 }
             },
             dist: {
                 src: [
                     'src/ext/intro',
-                    'src/js/hackbone.js',
-                    "src/js/events/Events.js",
-                    "src/js/base/*.js",
-                    "src/js/state/*.js",
-                    "src/js/model/*.js",
-                    "src/js/view/BaseView.js",
-                    "src/js/view/View.js",
-                    'src/js/*.js',
-                    'src/js/**/*.js',
+
+                    'src/js/core/*.js',
+                    'src/js/core/**/*.js',
+
+                    'src/js/modules/*.js',
+                    'src/js/modules/**/*.js',
+
                     'src/ext/outro'
                 ],
                 dest: 'build/hackbone-<%= pkg.version %>.js'
