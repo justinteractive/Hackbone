@@ -15,10 +15,12 @@ Hackbone is Backbone... Hacked, to support multiple design patterns on your fron
 
  - base class to extend for code-consistency across your whole codebase.
 
+
  > Hackbone.BaseView (extends Hackbone.Base)
 
  - base View class without knowledge of any State, Model or Collection
  - super class for `Hackbone.View`
+
 
  > Hackbone.State
 
