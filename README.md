@@ -9,23 +9,24 @@ Hackbone is Backbone... Hacked, to support multiple design patterns on your fron
  - MVC + VM (with Hackbone.BoundView)
  - MVP + VM (with Hackbone.BoundView)
 
-### New classes introduced (compared to basic Backbone which still exist)
+## New classes introduced (compared to basic Backbone which still exist)
 
- > Hackbone.Base
+### Hackbone.Base
 
- - base class to extend for code-consistency across your whole codebase.
+base class to extend for code-consistency across your whole codebase
+
+### Hackbone.BaseView
+
+base View class without knowledge of any State, Model or Collection
+
+super class for `Hackbone.View`
 
 
- > Hackbone.BaseView (extends Hackbone.Base)
+### Hackbone.State
 
- - base View class without knowledge of any State, Model or Collection
- - super class for `Hackbone.View`
+base REST-less Model class (no save, fetch, etc. async REST features)
 
-
- > Hackbone.State
-
- - base REST-less Model class (no save, fetch, etc. async REST features)
- - Super class for `Hackbone.Model`
+Super class for `Hackbone.Model`
 
 ### Dependencies:
 
